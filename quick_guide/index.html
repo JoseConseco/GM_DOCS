@@ -115,25 +115,33 @@
 <p><strong>Garment Maker</strong> supports only cyclic (closed) 2d Bezier curves. To create one use Shift+A &gt; Curve -&gt; Bezier Circe, and make any shape you wish from it.</br>
 For T-shirt, add four bezier circles, and model them into sewing patterns, like on image below:
 <img alt="Sewing Patterns" src="../img/sewing_patterns.png" /></p>
-<p>Arrange Sewing Patterns next to your character.</br>
+<p>Place Sewing Patterns next to your character.</br>
 <img alt="Sewing Patterns" src="../img/guide_patterns_placed.png" /></p>
 <p>To create garment click <strong>+(Plus)</strong> icon, in the <a href="../garment_panel/#Garment-Panel">Garment Maker Panel</a>.
 <video style="width:100%" controls src="../video/edit_sewings.mp4" type="video/mp4"></p>
-<p>More settings will popup, containing all the properties of current Garment (sewing patterns, sewings, pins etc).</br>
-Next use <strong>'Edit Sewings'</strong> button(the chain icon) in the Sewings box (see gif below). <strong>'Edit Sewings'</strong> is modal operator, that will let you define sewings between 2d curves (you can add, remove, change existing sewings, flip sewing direction).
-<video style="width:100%" controls src="./video/test.mp4" type="video/mp4">
-<img alt="Editing Sewings" src="../img/making_sewings.gif" /></p>
-<p>After sewing are defined press Enter / Spacebar to finish and accept them.  You may notice all the 2d curves, that were connected with sewings by you, are now assigned to the Garment Sewing Patterns box.</br> Enable <strong>'Use Bend Deformer'</strong> next to right and left sleeve Sewing Patterns, so that sleeves will wrap around the character arms (see gif below).</br>
-You can now convert those 2D curves to 3d mesh, with <strong>'Convert to mesh cloth'</strong> button and simulated cloth with build in blender cloth simulation.</br></p>
-<p><img alt="GM Simulation" src="../img/gm_sim.gif" />
-Notice that GMaker automatically creates and assigns vertex groups for each 2d pattern.</br>
-Often when simulating, the gravity will pull the cloth so fast to earth, that the generated sewing patterns won't have time to stick to character. To avoid that, you can use <strong>'Initialize Sim Setup'</strong> button -&gt; it will animate the gravity strength from 0 to 9,8 m/s^2 over the 'Sim Time' time. it will also animate the sewing force, and the 'Max Shrinking' property (if it is used).</br>
-When simulating usually you will want to increase the cloth 'Quality Steps' above 15, to prevent cloth going through body surface, and decrease the collision distance to around 0.002. The collision distance should be reduced also on the body of character.</br></p>
+<p>More settings will popup, containing all the properties of T-shirt (sewing patterns, sewings, pins etc).</p>
+<p>Use <strong>'Edit Sewings'</strong> button (chain icon) in the Sewings box (see video below). </p>
+<blockquote>
+<p><strong>'Edit Sewings'</strong> is modal operator, that will let you define sewings <a href="../garment_panel/#sewings">sewings</a> between 2d &gt; curves (you can add, remove, change existing sewings, flip sewing direction).</p>
+</blockquote>
+<p>Press Enter / Spacebar to accept them sewings.  </p>
+<blockquote>
+<p>Notice - all the 2d curves, that were connected with sewings, are automatically assigned to the Garment Sewing Patterns list.</br> </p>
+</blockquote>
+<p>You can now convert T-Shirt to 3d mesh, with <strong><a href="../garment_panel/#convert-to-mesh-cloth">'Convert to mesh cloth'</a></strong> button. New collection will be created named:</br>
+<strong><em>Generated + garment_name</em></strong></p>
+<p>From now on output mesh can be simulated using Blenders build in cloth sim.</br>
+<video style="width:100%" controls src="../video/tutorial_run_sim.mp4" type="video/mp4"></p>
+<p>Enable <strong>'Use Bend Deformer'</strong> for both sleeves patterns, so that they will wrap around the character arms.</br></p>
+<blockquote>
+<p>Notice - GMaker automatically creates and assigns vertex groups for each 2d pattern.</p>
+</blockquote>
+<p>Often when simulating, the gravity will pull the cloth too fast to earth, so that  generated T-shirt won't have time to stick to character. To avoid that, you can use <strong><a href="../garment_panel/#initialize-sim-setup">'Initialize Sim Setup'</a></strong> button -&gt; it will animate the gravity strength from 0 to 9,8 m/s^2 over the 'Sim Time' time. it will also animate the sewing force, and the 'Max Shrinking' property (if used).</p>
+<blockquote>
+<p>Usually when simulating you should increase the cloth 'Quality Steps' above 15, to prevent cloth going through body surface, and decrease the collision distance to around 0.002. The collision distance should be reduced also on the body of character.</p>
+</blockquote>
 <p>When you are satisfied with the simulation result you can:
-<ol type="a">
-  <li>Increase the generated T-shirt resolution by using 'Resolution' Slider, for final sim, and generated the T-shirt mesh again.</li>
-  <li>Tea Save the bake into the shape key with -&gt; <strong>'Save to shape key'</strong> button. You can save multiple shape keys to object, as long as you won't change the mesh.</li>
-</ol></p>
+Save the bake into the shape key with <strong><a href="../garment_panel/#save-to-shape-key">'Save to shape key'</a></strong> button. You can save multiple shape keys to object, as long as you won't change the mesh topology.</p>
               
             </div>
           </div>

@@ -69,7 +69,7 @@
         
             <li><a class="toctree-l3" href="#simulate">Simulate</a></li>
         
-            <li><a class="toctree-l3" href="#save-as-shape-key">Save as shape key</a></li>
+            <li><a class="toctree-l3" href="#save-to-shape-key">Save to shape key</a></li>
         
             <li><a class="toctree-l3" href="#convert-to-mesh-cloth">Convert to mesh cloth</a></li>
         
@@ -81,7 +81,7 @@
     <li class="toctree-l2"><a href="#sewing-patterns">Sewing Patterns</a></li>
     
 
-    <li class="toctree-l2"><a href="#shirt-sewings">Shirt Sewings</a></li>
+    <li class="toctree-l2"><a href="#sewings">Sewings</a></li>
     
 
     <li class="toctree-l2"><a href="#vertex-groups">Vertex Groups</a></li>
@@ -142,11 +142,11 @@
 <p><img alt="Main Panel" src="../img/gm_main_panel.png" /></p>
 <h4 id="simulate">Simulate<a class="headerlink" href="#simulate" title="Permanent link">#</a></h4>
 <p>Same as Bake option, located in object Physics Tab (but without support for ESC-key cancel) </p>
-<h4 id="save-as-shape-key">Save as shape key<a class="headerlink" href="#save-as-shape-key" title="Permanent link">#</a></h4>
+<h4 id="save-to-shape-key">Save to shape key<a class="headerlink" href="#save-to-shape-key" title="Permanent link">#</a></h4>
 <p>Saves the simulation result from current animation frame, to object shape key. You can save multiple shape keys, but they will be erased if you change geometry by using 'Convert to mesh cloth'</p>
 <h4 id="convert-to-mesh-cloth">Convert to mesh cloth<a class="headerlink" href="#convert-to-mesh-cloth" title="Permanent link">#</a></h4>
-<p>Converts current garment patterns, sewings, buttons, pockets to 3d mesh, that can be simulated. It will store vertex groups,corresponding to each sewing pattern. </br>
-If you enabled use of Bend Modifier, of Lattice Modifier they will be generated at this step.</br>
+<p>Converts current garment patterns, sewings, buttons, pockets to 3d mesh that can be simulated. It will create vertex groups corresponding to each sewing pattern.</br>
+If you enabled use of Bend Modifier, of Lattice Modifier they will be added to output mesh at this step.</br>
 The generated mesh will be added to collection named: 'Generated_'+garment_name eg. 'Generated_T_shirt' collection. The mesh itself will be named by garment Name property - located at top of each garment panel. </br>
 Density of generated mesh triangulation is described by the 'Resolution' parameter located next to it.</p>
 <h4 id="initialize-sim-setup">Initialize Sim Setup<a class="headerlink" href="#initialize-sim-setup" title="Permanent link">#</a></h4>
@@ -162,11 +162,11 @@ Options for Sewing Patterns:</p>
 <li>edit sewings connected to given sewing pattern.</li>
 <li>remove sewings connected to given sewing pattern.</li>
 </ul>
-<h3 id="shirt-sewings">Shirt Sewings<a class="headerlink" href="#shirt-sewings" title="Permanent link">#</a></h3>
+<h3 id="sewings">Sewings<a class="headerlink" href="#sewings" title="Permanent link">#</a></h3>
 <p><img alt="Sewings" src="../img/gm_sewings.png" /></p>
-<p>Each sewing contains information about two connected sewing patterns, and segments on each of them that will be connected.</br>
-You can connect two segments in same sewing pattern.</br>
-Both objects that the sewing is connecting, have to be added in Sewing Patterns list (it happens automatically when you edit sewings).</br>
+<p>Each sewing contains information about sewing patterns, and segments on each of them that will be merged together by sewing.</br>
+You can connect two segments in one sewing pattern (used often on sleeves, belts).</br>
+Both objects, connected by sewing, have to be added in Sewing Patterns list (it happens automatically when you edit sewings).</br>
 Options for Sewings:</p>
 <ul>
 <li>Source / Target pattern object and its segment index</li>
