@@ -70,20 +70,25 @@
             
     <li class="toctree-l2"><a href="#pattern-tools">Pattern Tools</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l3" href="#split-patterns">Split patterns</a></li>
-        
-            <li><a class="toctree-l3" href="#flip-patterns">Flip patterns</a></li>
-        
-            <li><a class="toctree-l3" href="#duplicate-sewed-pattern">Duplicate sewed pattern</a></li>
-        
-            <li><a class="toctree-l3" href="#symmetrize">Symmetrize</a></li>
-        
-        </ul>
+
+    <li class="toctree-l2"><a href="#split-patterns">Split patterns</a></li>
+    
+
+    <li class="toctree-l2"><a href="#flip-patterns">Flip patterns</a></li>
+    
+
+    <li class="toctree-l2"><a href="#duplicate-sewed-pattern">Duplicate sewed pattern</a></li>
+    
+
+    <li class="toctree-l2"><a href="#symmetrize">Symmetrize</a></li>
     
 
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../curve_modeling/">Curve modeling helpers</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -126,15 +131,19 @@
                 <h3 id="pattern-tools">Pattern Tools<a class="headerlink" href="#pattern-tools" title="Permanent link">#</a></h3>
 <p>They help with symmetrical modeling of garment 2d curves.
 <img alt="Pattern Tools" src="../img/gm_pattern_tools.png" /></p>
-<h4 id="split-patterns">Split patterns<a class="headerlink" href="#split-patterns" title="Permanent link">#</a></h4>
+<h3 id="split-patterns">Split patterns<a class="headerlink" href="#split-patterns" title="Permanent link">#</a></h3>
+<p><video style="width:100%" controls src="../video/gm_split.mp4" type="video/mp4"></video></p>
 <p>Split 2D curve into two separate object. The cut will be  determined by two selected bezier points. If not points are selected, the cut will fail.
 There is also F6 - 'Mirror instance' option, that will create symmetrical copy from one slice of selected 2d curve.</p>
-<h4 id="flip-patterns">Flip patterns<a class="headerlink" href="#flip-patterns" title="Permanent link">#</a></h4>
+<h3 id="flip-patterns">Flip patterns<a class="headerlink" href="#flip-patterns" title="Permanent link">#</a></h3>
+<p><video style="width:100%" controls src="../video/gm_flip.mp4" type="video/mp4"></video></p>
 <p>This will create instance on opposite side of character form selected 2d curve. If mesh with same name but different suffix is found on scene, the instance won't be created, and the position of object with same name will be created. For this to work the suffix for pair of objects has to be one of below:
 * (.l, .r) or (_r, _l) or same but with Upper case. For example:  arm_l, arm_r is valid.</p>
-<h4 id="duplicate-sewed-pattern">Duplicate sewed pattern<a class="headerlink" href="#duplicate-sewed-pattern" title="Permanent link">#</a></h4>
+<h3 id="duplicate-sewed-pattern">Duplicate sewed pattern<a class="headerlink" href="#duplicate-sewed-pattern" title="Permanent link">#</a></h3>
+<p><video style="width:100%" controls src="../video/gm_duplicate.mp4" type="video/mp4"></video></p>
 <p>This option will duplicate selected 2d curve, and it will connect each edge of duplicate to edges of source object, if source object is used is one of scene Garment patterns.</p>
-<h4 id="symmetrize">Symmetrize<a class="headerlink" href="#symmetrize" title="Permanent link">#</a></h4>
+<h3 id="symmetrize">Symmetrize<a class="headerlink" href="#symmetrize" title="Permanent link">#</a></h3>
+<p><video style="width:100%" controls src="../video/gm_symmetrize.mp4" type="video/mp4"></video></p>
 <p>It works like mirror modifier on meshes. For it to work 2 points have to be located near the 0 point in X-axis.
 <!-- <div class="video-wrapper">
     <iframe width="480" height="270" src="https://www.youtube.com/embed/09CL8PbIHY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -146,7 +155,7 @@ There is also F6 - 'Mirror instance' option, that will create symmetrical copy f
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../bind_project/" class="btn btn-neutral float-right" title="Bind Project Tool">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../curve_modeling/" class="btn btn-neutral float-right" title="Curve modeling helpers">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../garment_panel/" class="btn btn-neutral" title="Main Panel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -178,7 +187,7 @@ There is also F6 - 'Mirror instance' option, that will create symmetrical copy f
         <span><a href="../garment_panel/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../bind_project/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../curve_modeling/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

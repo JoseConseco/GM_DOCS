@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Bind Project Tool - Garment Maker Documentation</title>
+  <title>Curve modeling helpers - Garment Maker Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Bind Project Tool";
-    var mkdocs_page_input_path = "bind_project.md";
+    var mkdocs_page_name = "Curve modeling helpers";
+    var mkdocs_page_input_path = "curve_modeling.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -68,20 +68,26 @@
     <a class="" href="../pattern_tools/">Pattern Tools</a>
 	    </li>
           
-            <li class="toctree-l1">
-		
-    <a class="" href="../curve_modeling/">Curve modeling helpers</a>
-	    </li>
-          
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Bind Project Tool</a>
+    <a class="current" href="./">Curve modeling helpers</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#bind-project">Bind Project</a></li>
+    <li class="toctree-l2"><a href="#curve-modeling-helpers">Curve modeling helpers</a></li>
+    
+
+    <li class="toctree-l2"><a href="#subdivide-segment-gm">Subdivide Segment GM</a></li>
+    
+
+    <li class="toctree-l2"><a href="#delete-vert-gm">Delete vert GM</a></li>
     
 
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bind_project/">Bind Project Tool</a>
 	    </li>
           
         </ul>
@@ -106,7 +112,7 @@
     
       
     
-    <li>Bind Project Tool</li>
+    <li>Curve modeling helpers</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -116,14 +122,19 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="bind-project">Bind Project<a class="headerlink" href="#bind-project" title="Permanent link">#</a></h3>
-<p><img alt="Pattern Tools" src="../img/gm_bind_project.png" /></p>
-<p>This tool will snap and bind one 3d mesh, on surface of another, with help of temporary grid mesh. The source object will be following the target, without flattening the geometry, like 'Shrink wrap' modifier does. It is useful for attaching pockets, bags, decals to surface of simulated mesh.
-Projected Obj - Object that will be 'glued' to surface of cloth.
-Target - usually the cloth object.
-Smooth Strength - Helps to smooth out the deformation (prevents abrupt changes in geometry of Projected Obj after binding)
-Grid Resolution - resolution of projection. Bigger gives better results.
-Bind/Unbind - snap Projected Object to target. It will folllow the target, until user disable it with 'Unbind'</p>
+                <h3 id="curve-modeling-helpers">Curve modeling helpers<a class="headerlink" href="#curve-modeling-helpers" title="Permanent link">#</a></h3>
+<p>Simple modeling helpers for 2d curves, that are trying to preserve sewings order on edited sewing pattern.
+<img alt="Pattern Tools" src="../img/gm_pattern_tools.png" /></p>
+<h3 id="subdivide-segment-gm">Subdivide Segment GM<a class="headerlink" href="#subdivide-segment-gm" title="Permanent link">#</a></h3>
+<p><video style="width:100%" controls src="../video/gm_subdivide_segment.mp4" type="video/mp4"></video></p>
+<p>Subdivide segment, while preserving sewing order on edited pattern.</br>
+Located under W - key.</br>
+On video above you can see sewing order is messed up, if you delete vert the old way.</p>
+<h3 id="delete-vert-gm">Delete vert GM<a class="headerlink" href="#delete-vert-gm" title="Permanent link">#</a></h3>
+<p><video style="width:100%" controls src="../video/gm_delete_vert.mp4" type="video/mp4"></video></p>
+<p>Remove single vert, while preserving sewing order on edited pattern.
+Located under X - key.</br>
+On video above you can see sewing order is messed up, if you subdivide segment the old way.</p>
               
             </div>
           </div>
@@ -131,8 +142,10 @@ Bind/Unbind - snap Projected Object to target. It will folllow the target, until
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../bind_project/" class="btn btn-neutral float-right" title="Bind Project Tool">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../curve_modeling/" class="btn btn-neutral" title="Curve modeling helpers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../pattern_tools/" class="btn btn-neutral" title="Pattern Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -158,8 +171,10 @@ Bind/Unbind - snap Projected Object to target. It will folllow the target, until
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../curve_modeling/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../pattern_tools/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../bind_project/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
