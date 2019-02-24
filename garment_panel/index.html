@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Main Panel - Garment Maker Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Main Panel";
+    var mkdocs_page_input_path = "garment_panel.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Garment Maker Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../quick_guide/">Quick T-shirt Demo</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Main Panel</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#garment-panel">Garment Panel</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#simulate">Simulate</a></li>
+        
+            <li><a class="toctree-l3" href="#save-as-shape-key">Save as shape key</a></li>
+        
+            <li><a class="toctree-l3" href="#convert-to-mesh-cloth">Convert to mesh cloth</a></li>
+        
+            <li><a class="toctree-l3" href="#initialize-sim-setup">Initialize Sim Setup</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#sewing-patterns">Sewing Patterns</a></li>
+    
+
+    <li class="toctree-l2"><a href="#shirt-sewings">Shirt Sewings</a></li>
+    
+
+    <li class="toctree-l2"><a href="#vertex-groups">Vertex Groups</a></li>
+    
+
+    <li class="toctree-l2"><a href="#garment-pockets">Garment Pockets</a></li>
+    
+
+    <li class="toctree-l2"><a href="#buttons">Buttons</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pattern_tools/">Pattern Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bind_project/">Bind Project Tool</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Garment Maker Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Main Panel</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="garment-panel">Garment Panel<a class="headerlink" href="#garment-panel" title="Permanent link">#</a></h3>
+<p><img alt="Main Panel" src="../img/gm_main_panel.png" /></p>
+<h4 id="simulate">Simulate<a class="headerlink" href="#simulate" title="Permanent link">#</a></h4>
+<p>Same as Bake option, located in object Physics Tab (but without support for ESC-key cancel) </p>
+<h4 id="save-as-shape-key">Save as shape key<a class="headerlink" href="#save-as-shape-key" title="Permanent link">#</a></h4>
+<p>Saves the simulation result from current animation frame, to object shape key. You can save multiple shape keys, but they will be erased if you change geometry by using 'Convert to mesh cloth'</p>
+<h4 id="convert-to-mesh-cloth">Convert to mesh cloth<a class="headerlink" href="#convert-to-mesh-cloth" title="Permanent link">#</a></h4>
+<p>Converts current garment patterns, sewings, buttons, pockets to 3d mesh, that can be simulated. It will store vertex groups,corresponding to each sewing pattern. </br>
+If you enabled use of Bend Modifier, of Lattice Modifier they will be generated at this step.</br>
+The generated mesh will be added to collection named: 'Generated_'+garment_name eg. 'Generated_T_shirt' collection. The mesh itself will be named by garment Name property - located at top of each garment panel. </br>
+Density of generated mesh triangulation is described by the 'Resolution' parameter located next to it.</p>
+<h4 id="initialize-sim-setup">Initialize Sim Setup<a class="headerlink" href="#initialize-sim-setup" title="Permanent link">#</a></h4>
+<p>Helper button that makes the value of gravity increase slowly over time. This prevents falling of generated cloth on the floor too fast, before it wraps around the character. Same operation is applied to 'Max Sewing force' and 'Max Shrinking' parameters. It helps to achieve  better simulation result, preventing cloth moving to fast. </br>
+The speed at which those parameters will increase/decrease is described by 'Sim Time' parameter. Lowering sim time, gives faster change in animated values. </p>
+<h3 id="sewing-patterns">Sewing Patterns<a class="headerlink" href="#sewing-patterns" title="Permanent link">#</a></h3>
+<p><img alt="Sewing Patterns" src="../img/gm_sewing_patterns.png" /></p>
+<p>List of objects, that have to be 2D bezier curves.  They won't be connected unless user defines at least one sewing between them.</br>
+Options for Sewing Patterns:</p>
+<ul>
+<li>add / remove</li>
+<li>add bend, lattice modifier</li>
+<li>edit sewings connected to given sewing pattern.</li>
+<li>remove sewings connected to given sewing pattern.</li>
+</ul>
+<h3 id="shirt-sewings">Shirt Sewings<a class="headerlink" href="#shirt-sewings" title="Permanent link">#</a></h3>
+<p><img alt="Sewings" src="../img/gm_sewings.png" /></p>
+<p>Each sewing contains information about two connected sewing patterns, and segments on each of them that will be connected.</br>
+You can connect two segments in same sewing pattern.</br>
+Both objects that the sewing is connecting, have to be added in Sewing Patterns list (it happens automatically when you edit sewings).</br>
+Options for Sewings:</p>
+<ul>
+<li>Source / Target pattern object and its segment index</li>
+<li>flip sewing direction option</li>
+<li>buttons for adding / removing / editing sewings.</li>
+</ul>
+<h3 id="vertex-groups">Vertex Groups<a class="headerlink" href="#vertex-groups" title="Permanent link">#</a></h3>
+<p><img alt="Vertex Groups" src="../img/gm_vgroups.png" /></p>
+<p>List of additional vertex groups that can be added on simulated mesh.
+This gives user ability to assign vertex groups to multiple sewing patterns. For example you can create one vertex group that will include all stiffer sewing patterns, or vertex group that will be then deformed by lattice/bend modifier..</br>
+Options for Generated vertex groups:</p>
+<ul>
+<li>create/remove vertex group</li>
+<li>vertex group name</li>
+<li>list of sewing patterns that will use given vertex group</li>
+<li>add bend, lattice modifier to given vertex group</li>
+<li>option to generated border vertex group (and inverted border vertex group)</li>
+</ul>
+<h3 id="garment-pockets">Garment Pockets<a class="headerlink" href="#garment-pockets" title="Permanent link">#</a></h3>
+<p><img alt="Pockets" src="../img/gm_pockets.png" /></p>
+<p>List of garment pocket meshes.</br>
+Those option gives you ability to project one sewing pattern on surface of target pattern. For it to work it is best to enable cloth self collision if Physics panel. Target object - has to be member of Garment Sewing patterns list..</br>
+Options/Properties of Pockets:</p>
+<ul>
+<li>Add / Remove / Edit / Disable - pockets</li>
+<li>Pocket Obj - object that will be projected on surface of another one.</li>
+<li>Target - sewing projection target</li>
+<li>Pocket Sewings - list of indices from Pocket Obj segments, that will be connected to target.</li>
+</ul>
+<h3 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">#</a></h3>
+<p><img alt="Pins" src="../img/gm_pins.png" /></p>
+<p>This option is useful for pining together two points from same or two different sewings patterns.</br>
+Target and Source objects - has to be member of Garment Sewing patterns list..</br>
+Options/Properties of Pockets:</p>
+<ul>
+<li>Add / Remove / Edit / Disable - buttons</li>
+<li>Pin Source and Target pattern</li>
+<li>Pin source and target point location on surface (those points will be stitched together)</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pattern_tools/" class="btn btn-neutral float-right" title="Pattern Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../quick_guide/" class="btn btn-neutral" title="Quick T-shirt Demo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../quick_guide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pattern_tools/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
