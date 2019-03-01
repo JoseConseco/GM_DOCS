@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Home - Garment Maker Documentation</title>
+  <title>Home - Garment Tool Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Garment Maker Documentation</a>
+        <a href="." class="icon icon-home"> Garment Tool Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -53,7 +53,7 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#garment-maker-documentation">Garment Maker Documentation</a></li>
+    <li class="toctree-l2"><a href="#garment-tool-documentation">Garment Tool Documentation</a></li>
     
         <ul>
         
@@ -104,7 +104,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Garment Maker Documentation</a>
+        <a href=".">Garment Tool Documentation</a>
       </nav>
 
       
@@ -126,27 +126,28 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="garment-maker-documentation">Garment Maker Documentation<a class="headerlink" href="#garment-maker-documentation" title="Permanent link">#</a></h2>
-<p><strong>Garment Maker</strong> is Blender addon designed to simplify process of generating cloth sewing patterns directly inside Blender.
-Sewing patterns are made from 2d bezier curves, and can be converted to triangulated mesh object for simulation with blender build-in cloth sim. </br>
-The <strong>Garment Maker</strong> panel location:</br>
-* 3D Viewport -&gt; right Sidebar (N) -&gt; Garment Maker Tab.</p>
+                <h2 id="garment-tool-documentation">Garment Tool Documentation<a class="headerlink" href="#garment-tool-documentation" title="Permanent link">#</a></h2>
+<p><strong>Garment Tool</strong> is Blender addon designed to simplify process of making simulation ready cloth meshes inside Blender.
+Clot meshes are generated from 2d Bezier curves, sewed together and then triangulated into mesh object.</p>
+<p>Garment Tool panel is located in:</br>
+* 3D Viewport -&gt; right Sidebar (N) -&gt; Garment Tool Tab.</p>
 <p><img alt="GM UI" src="img/gm_ui.png" /></p>
 <h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h3>
-<p>Main addon features are:</p>
 <ul>
-<li>defining sewings between sewing patterns (2d bezier curves), directly in 3d viewport, .</li>
-<li>converting those curves to evenly triangulated mesh with adjustable resolution</li>
+<li>ability to define sewings between sewing patterns (2d Bezier curves), directly in 3d viewport,</li>
+<li>ability to generate evenly triangulated mesh with adjustable resolution</li>
+<li>tools for generating vertex groups modifier modifiers that will speed up you workflow</li>
+<li><a href="pattern_tools/">helper tools</a> for symmetrize, splitting, duplicating, flipping 2d curve sewing patterns.</li>
 <li>Pin tool for generating custom stitches (useful for buttons)</li>
-<li>Pocket tool for projecting sewings, from one patterns to target </li>
-<li>easy way of projecting 3d mesh, on surface of simulated cloth (useful for making attachments, bags, pockets, etc.)</li>
-<li>helpers for symmetrize, splitting, duplicating, flipping 2d curve sewing patterns.</li>
-<li>saving baked simulation into shape-key </li>
+<li>Pocket tool for generating sewings from source patterns to target pattern</li>
+<li><a href="bind_project/">Bind Tool</a> -&gt; easy way of projecting 3d mesh, on surface of simulated cloth (useful for making attachments, bags, pockets, etc.)</li>
+<li>saving baked simulation <a href="garment_panel/#save-to-shape-key">into shape-key</a></li>
 </ul>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">#</a></h3>
 <ul>
 <li>No interaction with simulated cloth in Blender</li>
 <li>Rarely but it happens that triangulation fails to find solution for given sewing pattern. Usually increasing triangulation resolution parameters fixes that. </li>
+<li>There is now way to cut holes or add sewing cuts inside pattern.</li>
 </ul>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
 <p><img alt="GM UI" src="img/gm_installation.png" />
@@ -201,5 +202,5 @@ When you are updating addon, usually it is good to remove old version by using '
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-02-24 20:14:05
+Build Date UTC : 2019-03-01 19:17:54
 -->

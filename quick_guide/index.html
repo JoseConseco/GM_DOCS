@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Quick T-shirt Demo - Garment Maker Documentation</title>
+  <title>Quick T-shirt Demo - Garment Tool Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Garment Maker Documentation</a>
+        <a href=".." class="icon icon-home"> Garment Tool Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -58,7 +58,10 @@
     <a class="current" href="./">Quick T-shirt Demo</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#quick-guide-modeling-t-shirt">Quick guide (modeling T-shirt)</a></li>
+    <li class="toctree-l2"><a href="#video">Video</a></li>
+    
+
+    <li class="toctree-l2"><a href="#text-version">Text version</a></li>
     
 
     </ul>
@@ -94,7 +97,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Garment Maker Documentation</a>
+        <a href="..">Garment Tool Documentation</a>
       </nav>
 
       
@@ -116,32 +119,31 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="quick-guide-modeling-t-shirt">Quick guide (modeling T-shirt)<a class="headerlink" href="#quick-guide-modeling-t-shirt" title="Permanent link">#</a></h3>
-<p><strong>Garment Maker</strong> supports only cyclic (closed) 2d Bezier curves. To create one use Shift+A &gt; Curve -&gt; Bezier Circe, and make any shape you wish from it.</br>
+                <h3 id="video">Video<a class="headerlink" href="#video" title="Permanent link">#</a></h3>
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/fSllxEBqn3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<h3 id="text-version">Text version<a class="headerlink" href="#text-version" title="Permanent link">#</a></h3>
+<p><strong>Garment Tool</strong> supports only cyclic (closed) 2d Bezier curves. To create one use Shift+A &gt; Curve -&gt; Bezier Circe, and make any shape you wish from it.</br>
 For T-shirt, add four bezier circles, and model them into sewing patterns, like on image below:
 <img alt="Sewing Patterns" src="../img/sewing_patterns.png" /></p>
 <p>Place Sewing Patterns next to your character.</br>
 <img alt="Sewing Patterns" src="../img/guide_patterns_placed.png" /></p>
-<p>To create garment click <strong>+(Plus)</strong> icon, in the <a href="../garment_panel/#Garment-Panel">Garment Maker Panel</a>.
+<p>To create garment click <strong>+(Plus)</strong> icon, in the <a href="../garment_panel/#Garment-Panel">Garment Tool Panel</a>.
 <video style="width:100%" controls src="../video/edit_sewings.mp4" type="video/mp4"></p>
 <p>More settings will popup, containing all the properties of T-shirt (sewing patterns, sewings, pins etc).</p>
-<p>Use <strong>'Edit Sewings'</strong> button (chain icon) in the Sewings box (see video below). </p>
+<p>Use <strong>'Edit Sewings'</strong> button (chain icon) in the <a href="../garment_panel/#sewings">sewings</a> box to connect patterns together. You can add, remove, change existing sewings, flip sewing direction, while in edit sewing mode.</br>
+Press Enter / Spacebar to accept them sewings.  </p>
 <blockquote>
-<p><strong>'Edit Sewings'</strong> is modal operator, that will let you define sewings <a href="../garment_panel/#sewings">sewings</a> between 2d &gt; curves (you can add, remove, change existing sewings, flip sewing direction).</p>
+<p>Notice - all the 2d curves, that were connected with sewings, are automatically assigned to the T-Shirt Sewing Patterns list.</br> </p>
 </blockquote>
-<p>Press Enter / Spacebar to accept them sewings.  </p>
-<blockquote>
-<p>Notice - all the 2d curves, that were connected with sewings, are automatically assigned to the Garment Sewing Patterns list.</br> </p>
-</blockquote>
-<p>You can now convert T-Shirt to 3d mesh, with <strong><a href="../garment_panel/#convert-to-mesh-cloth">'Convert to mesh cloth'</a></strong> button. New collection will be created named:</br>
+<p>You can now convert T-Shirt to 3d mesh, with <strong><a href="../garment_panel/#convert-to-mesh-cloth">'Convert To Mesh'</a></strong> button. New collection will be created named:</br>
 <strong><em>Generated + garment_name</em></strong></p>
 <p>From now on output mesh can be simulated using Blenders build in cloth sim.</br>
 <video style="width:100%" controls src="../video/tutorial_run_sim.mp4" type="video/mp4"></p>
 <p>Enable <strong>'Use Bend Deformer'</strong> for both sleeves patterns, so that they will wrap around the character arms.</br></p>
 <blockquote>
-<p>Notice - GMaker automatically creates and assigns vertex groups for each 2d pattern.</p>
+<p>Notice - GTool automatically creates and assigns vertex groups for each 2d pattern.</p>
 </blockquote>
-<p>Often when simulating, the gravity will pull the cloth too fast to earth, so that  generated T-shirt won't have time to stick to character. To avoid that, you can use <strong><a href="../garment_panel/#initialize-sim-setup">'Initialize Sim Setup'</a></strong> button -&gt; it will animate the gravity strength from 0 to 9,8 m/s^2 over the 'Sim Time' time. it will also animate the sewing force, and the 'Max Shrinking' property (if used).</p>
+<p>Usually when simulating, the gravity will pull the cloth too fast to earth, so that  generated T-shirt won't have time to stick to character. To avoid that, you can use <strong><a href="../garment_panel/#initialize-simulation">'Initialize Simulation'</a></strong> button -&gt; it will animate the gravity strength from 0 to 9,8 m/s^2 over the 'Sim Time' time. it will also animate the sewing force, and the 'Max Shrinking' property (if used).</p>
 <blockquote>
 <p>Usually when simulating you should increase the cloth 'Quality Steps' above 15, to prevent cloth going through body surface, and decrease the collision distance to around 0.002. The collision distance should be reduced also on the body of character.</p>
 </blockquote>

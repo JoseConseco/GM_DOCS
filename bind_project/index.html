@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Bind Project Tool - Garment Maker Documentation</title>
+  <title>Bind Project Tool - Garment Tool Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Garment Maker Documentation</a>
+        <a href=".." class="icon icon-home"> Garment Tool Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -94,7 +94,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Garment Maker Documentation</a>
+        <a href="..">Garment Tool Documentation</a>
       </nav>
 
       
@@ -117,13 +117,21 @@
             <div class="section">
               
                 <h3 id="bind-project">Bind Project<a class="headerlink" href="#bind-project" title="Permanent link">#</a></h3>
-<p><img alt="Pattern Tools" src="../img/gm_bind_project.png" /></p>
-<p>This tool will snap and bind one 3d mesh, on surface of another, with help of temporary grid mesh. The source object will be following the target, without flattening the geometry, like 'Shrink wrap' modifier does. It is useful for attaching pockets, bags, decals to surface of simulated mesh.
-Projected Obj - Object that will be 'glued' to surface of cloth.
-Target - usually the cloth object.
-Smooth Strength - Helps to smooth out the deformation (prevents abrupt changes in geometry of Projected Obj after binding)
-Grid Resolution - resolution of projection. Bigger gives better results.
-Bind/Unbind - snap Projected Object to target. It will folllow the target, until user disable it with 'Unbind'</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/f0HrTQlexhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>This tool will snap and bind one 3d mesh, on surface of another, without flattening the mesh itself. This tool will create grid helper object, that is used to transfer motion from cloth to projected object. </br>
+IT useful for attaching pockets, bags, decals to surface of simulated mesh.<br>
+<img alt="Pattern Tools" src="../img/gm_bind_project.png" /></p>
+<blockquote>
+<p>Note - for correct result apply scale on projected object. Also make sure projected object local Y - axis, is pointing toward the surface of the target cloth object.</p>
+</blockquote>
+<p>Options:</p>
+<ul>
+<li>Target - usually the cloth object.</li>
+<li>Smooth Strength - Helps to smooth out the deformation (prevents abrupt changes in geometry of projected object after binding)</li>
+<li>Grid Resolution - resolution of projection. Bigger gives better results.</li>
+<li>Bind/Unbind - snap projected object to target. It will follow the target, until user disable it with 'Unbind'</li>
+</ul>
               
             </div>
           </div>

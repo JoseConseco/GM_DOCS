@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Main Panel - Garment Maker Documentation</title>
+  <title>Main Panel - Garment Tool Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Garment Maker Documentation</a>
+        <a href=".." class="icon icon-home"> Garment Tool Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -71,9 +71,9 @@
         
             <li><a class="toctree-l3" href="#save-to-shape-key">Save to shape key</a></li>
         
-            <li><a class="toctree-l3" href="#convert-to-mesh-cloth">Convert to mesh cloth</a></li>
+            <li><a class="toctree-l3" href="#convert-to-mesh">Convert To Mesh</a></li>
         
-            <li><a class="toctree-l3" href="#initialize-sim-setup">Initialize Sim Setup</a></li>
+            <li><a class="toctree-l3" href="#initialize-simulation">Initialize Simulation</a></li>
         
         </ul>
     
@@ -90,7 +90,7 @@
     <li class="toctree-l2"><a href="#garment-pockets">Garment Pockets</a></li>
     
 
-    <li class="toctree-l2"><a href="#buttons">Buttons</a></li>
+    <li class="toctree-l2"><a href="#pins">Pins</a></li>
     
 
     </ul>
@@ -121,7 +121,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Garment Maker Documentation</a>
+        <a href="..">Garment Tool Documentation</a>
       </nav>
 
       
@@ -148,13 +148,17 @@
 <h4 id="simulate">Simulate<a class="headerlink" href="#simulate" title="Permanent link">#</a></h4>
 <p>Same as Bake option, located in object Physics Tab (but without support for ESC-key cancel) </p>
 <h4 id="save-to-shape-key">Save to shape key<a class="headerlink" href="#save-to-shape-key" title="Permanent link">#</a></h4>
-<p>Saves the simulation result from current animation frame, to object shape key. You can save multiple shape keys, but they will be erased if you change geometry by using 'Convert to mesh cloth'</p>
-<h4 id="convert-to-mesh-cloth">Convert to mesh cloth<a class="headerlink" href="#convert-to-mesh-cloth" title="Permanent link">#</a></h4>
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=1140&end=1183&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
+<p>Saves the simulation result from current animation frame, to object shape key. You can save multiple shape keys, but they will be erased if you change geometry by using 'Convert To Mesh'</p>
+<h4 id="convert-to-mesh">Convert To Mesh<a class="headerlink" href="#convert-to-mesh" title="Permanent link">#</a></h4>
 <p>Converts current garment patterns, sewings, buttons, pockets to 3d mesh that can be simulated. It will create vertex groups corresponding to each sewing pattern.</br>
 If you enabled use of Bend Modifier, of Lattice Modifier they will be added to output mesh at this step.</br>
 The generated mesh will be added to collection named: 'Generated_'+garment_name eg. 'Generated_T_shirt' collection. The mesh itself will be named by garment Name property - located at top of each garment panel. </br>
-Density of generated mesh triangulation is described by the 'Resolution' parameter located next to it.</p>
-<h4 id="initialize-sim-setup">Initialize Sim Setup<a class="headerlink" href="#initialize-sim-setup" title="Permanent link">#</a></h4>
+Density of generated mesh triangulation is described by the 'Resolution' parameter located next to it.</br></p>
+<blockquote>
+<p>Note - If icon on this button changes to cross, then something went wrong during last conversion. Try changing triangluaton method to Slow-HQ (also increasing resolution may help)</p>
+</blockquote>
+<h4 id="initialize-simulation">Initialize Simulation<a class="headerlink" href="#initialize-simulation" title="Permanent link">#</a></h4>
 <p>Helper button that makes the value of gravity increase slowly over time. This prevents falling of generated cloth on the floor too fast, before it wraps around the character. Same operation is applied to 'Max Sewing force' and 'Max Shrinking' parameters. It helps to achieve  better simulation result, preventing cloth moving to fast. </br>
 The speed at which those parameters will increase/decrease is described by 'Sim Time' parameter. Lowering sim time, gives faster change in animated values. </p>
 <h3 id="sewing-patterns">Sewing Patterns<a class="headerlink" href="#sewing-patterns" title="Permanent link">#</a></h3>
@@ -168,21 +172,23 @@ Options for Sewing Patterns:</p>
 <li>remove sewings connected to given sewing pattern.</li>
 </ul>
 <h3 id="sewings">Sewings<a class="headerlink" href="#sewings" title="Permanent link">#</a></h3>
-<p><img alt="Sewings" src="../img/gm_sewings.png" /></p>
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=105&end=233&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
 <p>Each sewing contains information about sewing patterns, and segments on each of them that will be merged together by sewing.</br>
 You can connect two segments in one sewing pattern (used often on sleeves, belts).</br>
 Both objects, connected by sewing, have to be added in Sewing Patterns list (it happens automatically when you edit sewings).</br>
-Options for Sewings:</p>
+Options for Sewings:</br>
+<img alt="Sewings" src="../img/gm_sewings.png" /></p>
 <ul>
-<li>Source / Target pattern object and its segment index</li>
-<li>flip sewing direction option</li>
+<li>Source / Target pattern that sewing is connecting and its segment IDs</li>
+<li>flip sewing direction checbox</li>
 <li>buttons for adding / removing / editing sewings.</li>
 </ul>
 <h3 id="vertex-groups">Vertex Groups<a class="headerlink" href="#vertex-groups" title="Permanent link">#</a></h3>
-<p><img alt="Vertex Groups" src="../img/gm_vgroups.png" /></p>
-<p>List of additional vertex groups that can be added on simulated mesh.
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=928&end=1071&autoplay=0" frameborder="0" allowfullscreen></iframe>
+List of additional vertex groups that can be added on simulated mesh.
 This gives user ability to assign vertex groups to multiple sewing patterns. For example you can create one vertex group that will include all stiffer sewing patterns, or vertex group that will be then deformed by lattice/bend modifier..</br>
-Options for Generated vertex groups:</p>
+Options for Generated vertex groups:</br>
+<img alt="Vertex Groups" src="../img/gm_vgroups.png" /></p>
 <ul>
 <li>create/remove vertex group</li>
 <li>vertex group name</li>
@@ -191,23 +197,25 @@ Options for Generated vertex groups:</p>
 <li>option to generated border vertex group (and inverted border vertex group)</li>
 </ul>
 <h3 id="garment-pockets">Garment Pockets<a class="headerlink" href="#garment-pockets" title="Permanent link">#</a></h3>
-<p><img alt="Pockets" src="../img/gm_pockets.png" /></p>
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=1261&end=1372&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
 <p>List of garment pocket meshes.</br>
-Those option gives you ability to project one sewing pattern on surface of target pattern. For it to work it is best to enable cloth self collision if Physics panel. Target object - has to be member of Garment Sewing patterns list..</br>
-Options/Properties of Pockets:</p>
+Those option gives you ability to project one sewing pattern on surface of target pattern. For it to work it is best to enable cloth self collision if Physics panel. Target object - has to be member of Garment Sewing patterns list.</br>
+Options/Properties of Pockets:</br>
+<img alt="Pockets" src="../img/gm_pockets.png" /></p>
 <ul>
 <li>Add / Remove / Edit / Disable - pockets</li>
 <li>Pocket Obj - object that will be projected on surface of another one.</li>
 <li>Target - sewing projection target</li>
 <li>Pocket Sewings - list of indices from Pocket Obj segments, that will be connected to target.</li>
 </ul>
-<h3 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">#</a></h3>
-<p><img alt="Pins" src="../img/gm_pins.png" /></p>
+<h3 id="pins">Pins<a class="headerlink" href="#pins" title="Permanent link">#</a></h3>
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=1488&end=1536&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
 <p>This option is useful for pining together two points from same or two different sewings patterns.</br>
 Target and Source objects - has to be member of Garment Sewing patterns list..</br>
-Options/Properties of Pockets:</p>
+Options/Properties of Pins:</br>
+<img alt="Pins" src="../img/gm_pins.png" /></p>
 <ul>
-<li>Add / Remove / Edit / Disable - buttons</li>
+<li>Add / Remove / Edit / Disable - pins</li>
 <li>Pin Source and Target pattern</li>
 <li>Pin source and target point location on surface (those points will be stitched together)</li>
 </ul>

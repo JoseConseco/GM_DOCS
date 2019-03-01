@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Pattern Tools - Garment Maker Documentation</title>
+  <title>Pattern Tools - Garment Tool Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Garment Maker Documentation</a>
+        <a href=".." class="icon icon-home"> Garment Tool Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -106,7 +106,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Garment Maker Documentation</a>
+        <a href="..">Garment Tool Documentation</a>
       </nav>
 
       
@@ -132,22 +132,25 @@
 <p>They help with symmetrical modeling of garment 2d curves.
 <img alt="Pattern Tools" src="../img/gm_pattern_tools.png" /></p>
 <h3 id="split-patterns">Split patterns<a class="headerlink" href="#split-patterns" title="Permanent link">#</a></h3>
-<p><video style="width:100%" controls src="../video/gm_split.mp4" type="video/mp4"></video></p>
-<p>Split 2D curve into two separate object. The cut will be  determined by two selected bezier points. If not points are selected, the cut will fail.
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=1692&end=1776&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
+<p>Split 2D curve into two separate object. The cut will be  determined by two selected bezier points. If no points are selected, the cut will fail.
 There is also F6 - 'Mirror instance' option, that will create symmetrical copy from one slice of selected 2d curve.</p>
 <h3 id="flip-patterns">Flip patterns<a class="headerlink" href="#flip-patterns" title="Permanent link">#</a></h3>
-<p><video style="width:100%" controls src="../video/gm_flip.mp4" type="video/mp4"></video></p>
-<p>This will create instance on opposite side of character form selected 2d curve. If mesh with same name but different suffix is found on scene, the instance won't be created, and the position of object with same name will be created. For this to work the suffix for pair of objects has to be one of below:
-* (.l, .r) or (_r, _l) or same but with Upper case. For example:  arm_l, arm_r is valid.</p>
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=451&end=497&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
+<p>Flip operator will create instance of selected 2d curve, on opposite side of character. If you flip curve with proper suffix, this tool will update the position of previous duplicate, instead of creating new instance. </br>
+Correct suffixes for curve names are:</p>
+<ul>
+<li>(.r, .l) or (.R and .L)</li>
+<li>(.right, .left) or (.RIGHT, .LEFT)</li>
+<li>or the same but with dot replaced with '_'</li>
+</ul>
+<p>For example:  arm_l, arm_r is valid suffix. </p>
 <h3 id="duplicate-sewed-pattern">Duplicate sewed pattern<a class="headerlink" href="#duplicate-sewed-pattern" title="Permanent link">#</a></h3>
-<p><video style="width:100%" controls src="../video/gm_duplicate.mp4" type="video/mp4"></video></p>
-<p>This option will duplicate selected 2d curve, and it will connect each edge of duplicate to edges of source object, if source object is used is one of scene Garment patterns.</p>
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=505&end=574&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
+<p>This option will duplicate selected 2d curve, and it will connect all edges of duplicate and source curve. Sewings will be generated only if source curve is used it at least one Garment.</p>
 <h3 id="symmetrize">Symmetrize<a class="headerlink" href="#symmetrize" title="Permanent link">#</a></h3>
-<p><video style="width:100%" controls src="../video/gm_symmetrize.mp4" type="video/mp4"></video></p>
-<p>It works like mirror modifier on meshes. For it to work 2 points have to be located near the 0 point in X-axis.
-<!-- <div class="video-wrapper">
-    <iframe width="480" height="270" src="https://www.youtube.com/embed/09CL8PbIHY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> --></p>
+<p><iframe width="640" height="360" src="http://www.youtube.com/embed/fSllxEBqn3k?rel=0&start=400&end=444&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
+<p>It works like mirror modifier on meshes. For it to work two points on selected curve have to be located near the center of X-axis (but they don't have to be selected).</p>
               
             </div>
           </div>
