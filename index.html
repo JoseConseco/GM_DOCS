@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/theme.css" type="text/css" />
   <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="extra.css" rel="stylesheet">
   
   <script>
     // Current page data
@@ -142,18 +143,19 @@ Clot meshes are generated from 2d Bezier curves, sewed together and then triangu
 <li>ability to define sewings between sewing patterns (2d Bezier curves), directly in 3d viewport,</li>
 <li>ability to generate evenly triangulated mesh with adjustable resolution</li>
 <li>tools for automatic generation vertex groups adn modifier that will speed up you workflow</li>
-<li><a href="pattern_tools/">helper tools</a> for symmetrize, splitting, duplicating, flipping 2d curve sewing patterns.</li>
+<li><a href="pattern_tools/">helper tools</a> for symmetrize, splitting, duplicating, flipping 2d curve sewing patterns, while preserving sewings data.</li>
+<li>Support for cutting holes inside sewing patterns (since 1.0.6)</li>
 <li>Pin tool for generating custom stitches (useful for buttons)</li>
 <li>Pocket tool for generating sewings from source patterns to target pattern</li>
 <li><a href="bind_project/">Bind Tool</a> -&gt; easy way of projecting 3d mesh, on surface of simulated cloth (useful for making attachments, bags, pockets, etc.)</li>
-<li><a href="garments_library/">Garment library</a> - to store and load your creations</li>
+<li><a href="garments_library/">Garment library</a> - store and load your creations</li>
 <li>saving baked simulation <a href="garment_panel/#save-to-shape-key">into shape-key</a></li>
 </ul>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">#</a></h3>
 <ul>
 <li>No interaction with simulated cloth in Blender</li>
 <li>Rarely but it happens that triangulation fails to find solution for given sewing pattern. Usually increasing triangulation resolution parameters fixes that. </li>
-<li>There is now way to cut holes or add sewing cuts inside pattern.</li>
+<li><strike>There is now way to cut holes or add sewing cuts inside pattern.</strike> Support for cutting holes added since version 1.0.6</li>
 </ul>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
 <p><img alt="GM UI" src="img/gm_installation.png" />
@@ -208,5 +210,5 @@ When you are updating addon, usually it is good to remove old version by using '
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-04-24 14:28:16
+Build Date UTC : 2019-05-29 18:54:10
 -->
