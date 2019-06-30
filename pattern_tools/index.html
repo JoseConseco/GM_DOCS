@@ -147,7 +147,7 @@
 <p>They help with modeling sewing patterns curves, while preserving sewings data. You have option to split, mirror, weld points etc.</p>
 <p><img alt="Pattern Tools" src="../img/gm_pattern_tools.png" /></p>
 <h3 id="symmetrize">Symmetrize<a class="headerlink" href="#symmetrize" title="Permanent link">#</a></h3>
-<p>Symmetrize behaves like mirror modifier on meshes. For it to work properly two points on curve have to be located near the center of X-axis.
+<p>Symmetrize behaves like mirror modifier on meshes.
 There are two algorithms for symmetrize:</p>
 <ul>
 <li>default will preserve sewings better, but may fail to symmetrize more complicated patterns</li>
@@ -174,7 +174,8 @@ Patterns are linked if theirs names ends with:</p>
 <video style="width:100%" controls src="../video/connect_points.mp4" type="video/mp4"></video>
 
 <h3 id="cut-pattern-in-half">Cut pattern in half<a class="headerlink" href="#cut-pattern-in-half" title="Permanent link">#</a></h3>
-<p>Split 2D curve into two separate object. Splitting is performed along the middle line. There is option (F9) to instance the mirrored part.</p>
+<p>Split 2D curve into two parts. Splitting is performed along the center X-axis line. There is option (F9) to instance the mirrored part.
+* Instance option wont preserve the sewings data!</p>
 <video style="width:100%" controls src="../video/cut_half.mp4" type="video/mp4"></video>
 
 <h3 id="separate-join-patterns">Separate / Join patterns<a class="headerlink" href="#separate-join-patterns" title="Permanent link">#</a></h3>

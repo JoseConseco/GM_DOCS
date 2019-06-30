@@ -164,7 +164,7 @@
 <p>The generated mesh will be added to collection named: 'Generated_'+garment_name eg. 'Generated_T_shirt' collection. The mesh itself will be named by garment Name property - located at top of each garment panel.</p>
 <p>Density of generated mesh triangulation is described by the 'Resolution' parameter located next to it.</p>
 <blockquote>
-<p>Note - If icon on this button changes to cross, then something went wrong during last conversion. Try changing triangluaton method to Slow-HQ (also increasing resolution may help)</p>
+<p><strong>Note</strong> - If icon on this button changes to cross, then something went wrong during last conversion. Try changing triangluaton method to Slow-HQ (also increasing resolution may help)</p>
 </blockquote>
 <h4 id="initialize-simulation">Initialize Simulation<a class="headerlink" href="#initialize-simulation" title="Permanent link">#</a></h4>
 <p>Helper button that makes the value of gravity increase slowly over time. This prevents falling of generated cloth on the floor too fast, before it wraps around the character. Same operation is applied to 'Max Sewing force' and 'Max Shrinking' parameters. It helps to achieve  better simulation result, preventing cloth moving to fast.</p>
@@ -173,13 +173,14 @@
 <p>Output object - is pointing to generated triangulated mesh. Added in version 2.0.5 to help with proper exporting of presets to <a href="../garments_library/">Garment Library</a></p>
 <h3 id="sewing-patterns">Sewing Patterns<a class="headerlink" href="#sewing-patterns" title="Permanent link">#</a></h3>
 <p><img alt="Sewing Patterns" src="../img/gm_sewing_patterns.png" /></p>
-<p>List of objects, that have to be 2D bezier curves.  They won't be connected unless user defines at least one sewing between them.
-Options for Sewing Patterns:</p>
+<p>List of 2D bezier curves. Pattern won't be triangulated unless user defines at least one sewing connected to it.</p>
+<p>If curve fill mode is set to node (or curve mode is set to 3D) - then generated pattern wont be filled with triangles (only outline vertices will be generated).</p>
+<p>Options for Sewing Patterns:</p>
 <ul>
 <li>add / remove</li>
 <li>add bend, lattice modifier</li>
 <li>edit sewings connected to given sewing pattern.</li>
-<li>remove sewings connected to given sewing pattern.</li>
+<li>disable/enable sewing pattern (round radio button).</li>
 </ul>
 <h3 id="sewings">Sewings<a class="headerlink" href="#sewings" title="Permanent link">#</a></h3>
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/qvdxE6YbOSU?rel=0&start=125&end=283&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
@@ -221,7 +222,7 @@ This gives user ability to assign vertex groups to multiple sewing patterns. For
 <h3 id="pins">Pins<a class="headerlink" href="#pins" title="Permanent link">#</a></h3>
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/qvdxE6YbOSU?rel=0&start=1628&end=1798&autoplay=0" frameborder="0" allowfullscreen></iframe></p>
 <p>This option is useful for pining together two points from same or two different sewings patterns.</p>
-<p>Target and Source objects - has to be member of Garment Sewing patterns list..</p>
+<p>Pin Target and Source objects - have to be member of Garment Sewing patterns list..</p>
 <p>Options/Properties of Pins:</p>
 <p><img alt="Pins" src="../img/gm_pins.png" /></p>
 <ul>
