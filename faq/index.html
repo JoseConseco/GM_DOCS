@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Cloth Interaction - Garment Tool Documentation</title>
+  <title>FAQ - Garment Tool Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Cloth Interaction";
-    var mkdocs_page_input_path = "cloth_interaction.md";
+    var mkdocs_page_name = "FAQ";
+    var mkdocs_page_input_path = "faq.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -74,15 +74,9 @@
     <a class="" href="../garments_library/">Garments Library</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Cloth Interaction</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#cloth-interaction-panel">Cloth interaction panel</a></li>
-    
-
-    </ul>
+    <a class="" href="../cloth_interaction/">Cloth Interaction</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -95,9 +89,27 @@
     <a class="" href="../bind_project/">Bind Project Tool</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../faq/">FAQ</a>
+    <a class="current" href="./">FAQ</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#which-license-should-i-buy">Which license should I buy?</a></li>
+    
+
+    <li class="toctree-l2"><a href="#my-cloth-goes-through-character-body">My cloth goes through character body</a></li>
+    
+
+    <li class="toctree-l2"><a href="#my-cloth-are-falling-on-floor-too-fast">My cloth are falling on floor too fast</a></li>
+    
+
+    <li class="toctree-l2"><a href="#there-are-ugly-gaps-between-sewing-patterns">There are ugly gaps between sewing patterns</a></li>
+    
+
+    <li class="toctree-l2"><a href="#how-to-finalize-simulated-garment">How to finalize simulated garment?</a></li>
+    
+
+    </ul>
 	    </li>
           
         </ul>
@@ -122,7 +134,7 @@
     
       
     
-    <li>Cloth Interaction</li>
+    <li>FAQ</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -132,13 +144,34 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="cloth-interaction-panel">Cloth interaction panel<a class="headerlink" href="#cloth-interaction-panel" title="Permanent link">#</a></h3>
-<p>Since version 1.1.0 you can now pull cloth with left mouse button. 
-To start the tool just select cloth object and click 'Interact with cloth' button. </p>
-<p>Now you will be able to pull cloth with LMB</p>
-<p><img alt="Clot Interaction Panel" src="../img/cloth_interaction_panel.jpg" /></p>
-<p>See video guide:</p>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/gaM-vAWw3vs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4 id="which-license-should-i-buy">Which license should I buy?<a class="headerlink" href="#which-license-should-i-buy" title="Permanent link">#</a></h4>
+<p>Business license - use when you have company and above 100k $ income. Else use license for Individuals</p>
+<h4 id="my-cloth-goes-through-character-body">My cloth goes through character body<a class="headerlink" href="#my-cloth-goes-through-character-body" title="Permanent link">#</a></h4>
+<p>Make sure you enabled cloth collision on both garment mesh and character body:</p>
+<ul>
+<li><strong>Garment collision</strong>: Physics tab -&gt; Cloth properties -&gt; Collision tab)</li>
+<li><strong>Character body</strong>: Physics tab -&gt; Collision </li>
+</ul>
+<p><img alt="Collision Settings" src="../img/collision_settings.jpg" />
+<em>Collision settings that are good if you character has proper dimensions (is around 2 meters high)</em></p>
+<h4 id="my-cloth-are-falling-on-floor-too-fast">My cloth are falling on floor too fast<a class="headerlink" href="#my-cloth-are-falling-on-floor-too-fast" title="Permanent link">#</a></h4>
+<p>Is is because gravity is pulling cloth too strong. See: <strong><a href="../garment_panel/#initialize-simulation">'Initialize Simulation'</a></strong> button </p>
+<h4 id="there-are-ugly-gaps-between-sewing-patterns">There are ugly gaps between sewing patterns<a class="headerlink" href="#there-are-ugly-gaps-between-sewing-patterns" title="Permanent link">#</a></h4>
+<p>Blenders cloth 'Self collisions' may cause that. Try reducing cloth <strong>'Self Collisions'</strong> DISTANCE parameter, or disable it completely, if you do not need it.</p>
+<p><img alt="Collision Settings" src="../img/patterns_gap.jpg" />
+<em>There is visible gap visible here, caused by cloth <strong>Self Collisions</strong></em></p>
+<blockquote>
+<p><strong>Note</strong> - There will be always some small gap visible between two sewing patterns. This is just how blender stitching works. To remove the gap completely see paragraph below.</p>
+</blockquote>
+<h4 id="how-to-finalize-simulated-garment">How to finalize simulated garment?<a class="headerlink" href="#how-to-finalize-simulated-garment" title="Permanent link">#</a></h4>
+<p>This will bake current state of cloth simulation into mesh vertices. Is is destructive operation, so you may want to copy your garment object first.</p>
+<ul>
+<li>Apply all modifiers on cloth mesh</li>
+<li>To remove sewing edges: switch your selection mode to Edge type only</li>
+<li>then press 'spacebar' (or F3) -&gt; use 'Select Non Manifold' -&gt; with only 'Wire' edges enabled, </li>
+<li>then press 'X' -&gt; 'Collapse edges' -&gt; to merge sewing edges into one point. This will remove gaps from in between sewing patterns.</li>
+</ul>
+<p>From now on mesh is ready to be sculpted on. You can use 'alt+J' - hotkey in mesh edit mode do merge tris into quad, for better sculpting topology.</p>
               
             </div>
           </div>
@@ -146,10 +179,8 @@ To start the tool just select cloth object and click 'Interact with cloth' butto
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../curve_modeling/" class="btn btn-neutral float-right" title="Curve modeling helpers">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../garments_library/" class="btn btn-neutral" title="Garments Library"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../bind_project/" class="btn btn-neutral" title="Bind Project Tool"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -175,10 +206,8 @@ To start the tool just select cloth object and click 'Interact with cloth' butto
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../garments_library/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../bind_project/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../curve_modeling/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
